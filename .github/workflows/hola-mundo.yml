@@ -1,0 +1,15 @@
+name: hola-mundo #Nombre del workflow
+run-name: ¡Estoy aprendiendo GitHub Actions! #Nombre de el workflow que se mostrará en la interfaz de GitHub Actions
+on: [push] #evento de que lo activará
+jobs: #Definición de los jobs
+  hola-mundo: #Nombre del jon
+    runs-on: ubuntu-latest #Maquina en la que se ejecutará
+    steps: #Lista de steps del job hola-mundo
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22
+      - name: Run index
+        run: node index.js
