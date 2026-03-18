@@ -8,10 +8,10 @@ jobs:
     steps:
       - name: Mostrar info del repo
         run: |
-          echo "Repositorio: ${{ github.repository }}"
-          echo "Rama: ${{ github.ref_name }}"
-          echo "Evento: ${{ github.event_name }}"
-          echo "Actor: ${{ github.actor }}"
+          echo "en el Repositorio: ${{ github.repository }}"
+          echo "en la Rama: ${{ github.ref_name }}"
+          echo "en el Evento: ${{ github.event_name }}"
+          echo "Actor fue: ${{ github.actor }}"
   not-main:
     if: ${{ github.ref != 'refs/heads/main' }}
     runs-on: ubuntu-latest
